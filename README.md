@@ -21,6 +21,7 @@
 
 ## Features Available
 - Authentication of users using emailId and password.
+- Catch errors in login like empty field,network error,password invalid etc,email used by another user.
 - Users can set their display name for the video and chat meet.
 - Persistence of login state till 5 days using session cookies.
 - A chat room having a uniqueId using uuid.
@@ -30,7 +31,8 @@
 - Unlimited duration calls
 
 ## Getting started
-Guide for local deployment -
+
+### Guide for local deployment -
 1. Clone the repository.
 ```
 git clone https://github.com/divya-ilona/videochat1.git
@@ -43,6 +45,21 @@ cd videochat1
 ```
 npm install
 ```
-4.Change peer port on script.js to local host(ex-3000)
-5.Change node to nodemon in package.json
+4. Change peer port on script.js to local host.(ex-3000)
+5. Change node to nodemon in package.json.
+```
+6. npm start
+```
+you should see the files running on localhost.
+
+### Guide for using Website
+1. Create and account by clicking signup.
+2. Relogin information.
+3. Click on Go to Meeting.
+4. The chat room will open, you can type message in the send container at bottom.
+![Screenshot (236)](https://user-images.githubusercontent.com/61948559/125345213-e2c25f00-e375-11eb-8b33-465ca9a10549.png)
+
+
+
+
   

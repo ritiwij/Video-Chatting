@@ -1,4 +1,4 @@
-# Video call and chat website using Socket.io Express and Firebase
+# Video call and chat website using WebRTC,Socket.io,Express and Firebase
 
 ##  Tech stacks used
 
@@ -27,5 +27,6 @@
 - Ability to connect and get video and audio of all the people in the chat room(works fine till 3 or 4 participants).
 - Ability to chat real time in meeting.
 - Ability to Mute and Turn video-off in meeting.
+- Unlimited duration calls
 
   

@@ -29,4 +29,9 @@
 - Ability to Mute and Turn video-off in meeting.
 - Unlimited duration calls
 
+## Getting started
+Guide for local deployment -
+1. Clone the repository.
+
+
   

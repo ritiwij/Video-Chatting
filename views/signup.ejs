@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teams Clone</title>
+    <link rel="stylesheet" href="./style/mvp.css" />
+   <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" ></script>
+    <!-- The core Firebase authentication -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <!-- Jquery script -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer ></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <!----------------------------------sign up form ------------------------->
+        <form id="signup">
+          <label>User Name</label>
+          <input type="text" name="name" />
+          <label>Email Id</label>
+          <input type="text" name="login" />
+          <label>Password</label>
+          <input type="password" name="password" />
+          <button>Sign Up</button>
+          <div>
+          Already have an account? 
+            <a href="/login" >login</a>
+          </div>
+          <p class='error pink-text center-align'></p>
+        </form> 
+      </section>
+      <!-------------X-------------------------sign up form ----------------x-------------------->
+      <script>
+       //---------------firebase initialisation----------------------------//
+        window.addEventListener("DOMContentLoaded", () => {
+            var firebaseConfig = {
+        apiKey: "AIzaSyBz-bjK-iFRBkJ77AXk8ZczlHdpsYfMWxM",
+        authDomain: "videocall-d9d1b.firebaseapp.com",
+        projectId: "videocall-d9d1b",
+        storageBucket: "videocall-d9d1b.appspot.com",
+        messagingSenderId: "391443891517",
+        appId: "1:391443891517:web:a8a0299910e94cd553f154",
+        measurementId: "G-VD9P1TES63"
+        };
+
+          firebase.initializeApp(firebaseConfig);
+
+          firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
+         
+          //get form obejct
+           const signupform= document.getElementById("signup");
+          document
+            .getElementById("signup")
+            .addEventListener("submit", (event) => {
+              event.preventDefault();
+              // listen to submit event
+              //get user info
+              const login = event.target.login.value;
+              const password = event.target.password.value;
+              const name=event.target.name.value;
+                // create new users
+              firebase.auth().createUserWithEmailAndPassword(login, password)
+                .then(({ user }) => {
+                     user.updateProfile({
+                      displayName: name
+                  }).then(function() {
+                      // Update successful.
+                      console.log("done");
+                  }, function(error) {
+                      // An error happened.
+                       console.log('fail');
+                  }); 
+                  return user.getIdToken().then((idToken) => {
+                    return fetch("/sessionLogin", {
+                      //create session cookie
+                      method: "POST",
+                      headers: {
+                        Accept: "application/json",
+                        "Content-Type": "application/json",
+                        "CSRF-Token": Cookies.get("XSRF-TOKEN"),
+                      },
+                      body: JSON.stringify({ idToken }),
+                    });
+                    
+                  });
+                })
+                .then(() => {
+                  // if promise is true redirect to home page and show protected content
+                  var txt;
+                  if (confirm("Please login again")) {
+                      txt = "";
+                      
+                    } else {
+                      txt = "You pressed Cancel!";
+                    }
+                    window.location.assign("/login");
+                  // set error message as null
+                    signupform.querySelector('.error').innerHTML=txt;
+                })
+                .catch((error) => {
+                        // if not able to signup diplay error messge 
+                        //if email id not entered
+                        if(login==='')
+                        signupform.querySelector('.error').innerHTML='enter email id';
+                        // password not entered
+                        else if(password==='')
+                        signupform.querySelector('.error').innerHTML='enter password';
+                        //email id or password is incorrect
+                        else
+                         signupform.querySelector('.error').innerHTML=error.message;
+                });
+                
+              return false;
+            });
+                        // listen for auth changes
+                firebase.auth().onAuthStateChanged(user=>{
+                        if(user)
+                        {   console.log(username)
+                            localStorage.setItem("usernames",JSON.stringify(user.displayName) );
+                        }
+            })
+
+        });
+      </script>
+    </main>
+  </body>
+  <!--Auth javascript file-->
+  <script src="./js/script.js" ></script>
+      <!-- Home javascript file
+      <script src="./js/home.js" ></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+</html>

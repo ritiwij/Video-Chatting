@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Clone</title>
+    <!--Home style file-->
+    <link rel="stylesheet" href="./style/home.css">
+    <!--Font awesome icons-->
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js" ></script>
+     <!-- The core Firebase authentication -->
+     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+     <!-- Jquery script -->
+     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js" defer ></script>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Josefin+Sans:ital,wght@0,200;1,200;1,700&family=Lexend+Deca&family=Livvic:wght@200&family=Roboto:ital,wght@0,100;1,100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!---------------------------NAVIGATION---------------------------->
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="#" class="text-gray">Teams Clone</a>
+                <i class="fas fa-user-friends fa-2x"></i>
+            </div>
+            <div class="toggle-collapse">
+                <div  class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    
+                    
+                    <li class="nav-link">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Watch Demo</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="https://github.com/divyasinha2001/Videochat-website">Github Repo</a>
+                    </li>
+                    <li class="nav-link logged-in">
+                        <a href="/sessionLogout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-----------x---------------NAVIGATION---------------------------->
+    <!----------------------------- Main Site Section ------------------------------>
+
+      <main>
+
+        <!------------------------ Site Title ---------------------->
+
+        <section class="site-title">
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                
+                <h3 class='my'>Teams is for everyone</h3>
+                <h1 class='my'>Meet, chat, call, and collaborate in just one place.</h1>
+                
+                <button onclick="document.location='/rooms'" class="btn">Go to meeting</button>
+                
+            </div>
+        </section>
+      </main>
+
+        <!------------x----------- Site Title ----------x----------->
+    <!---------------x------------- Main Site Section ---------------x-------------->
+       
+
+              
+     <!-- Jquery Library file -->
+     <script src="./js/Jquery3.6.0.min.js"></script>
+    <!--Home javascript file-->
+    <script src="./js/home.js" ></script>
+    <!--Auth javascript file-->
+  <script src="./js/auth.js" ></script>
+</body>
+</html>

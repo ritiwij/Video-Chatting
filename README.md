@@ -1,3 +1,7 @@
-# video call and chat website using Socket.io Express and Firebase
+# Video call and chat website using Socket.io Express and Firebase
 
-######Features
+##  Tech stacks used
+
+###### Frontend
+
+  

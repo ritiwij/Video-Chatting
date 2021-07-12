@@ -52,8 +52,9 @@ npm install
 ```
 4. Change peer port on script.js to local host.(ex-3000)
 5. Change node to nodemon in package.json.
+6. Create your own firebase key from their website.
 ```
-6. npm start
+7. npm start
 ```
 you should see the files running on localhost.
 

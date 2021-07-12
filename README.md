@@ -35,5 +35,14 @@ Guide for local deployment -
 ```
 git clone https://github.com/divya-ilona/videochat1.git
 ```
-
+2.Change the working directory
+```
+cd videochat1
+```
+3.Install dependencies
+```
+npm install
+```
+4.Change peer port on script.js to local host(ex-3000)
+5.Change node to nodemon in package.json
   

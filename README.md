@@ -20,6 +20,9 @@
 
 - Firebase
 
+#### Hosting
+- heroku
+
 ## Features Available
 - Authentication of users using emailId and password.
 - Catch errors in login like empty field,network error,password invalid etc,email used by another user.
@@ -31,6 +34,7 @@
 - Ability to Mute and Turn video-off in meeting.
 - Unlimited duration calls
 
+## Link of website:https://cloneteam.herokuapp.com/
 ## Getting started
 
 ### Guide for local deployment -

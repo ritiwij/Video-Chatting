@@ -32,6 +32,8 @@
 ## Getting started
 Guide for local deployment -
 1. Clone the repository.
+```
 git clone https://github.com/divya-ilona/videochat1.git
+```
 
   

@@ -2,6 +2,10 @@
 
 ##  Tech stacks used
 
-###### Frontend
+#### Frontend
+
+- HTML,CSS
+- Javascript
+- Embedded Javascript
 
   

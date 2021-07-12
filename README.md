@@ -1,4 +1,4 @@
-![Screenshot (237)](https://user-images.githubusercontent.com/61948559/125345553-4fd5f480-e376-11eb-9730-6d26581f866a.png)
+
 # Video call and chat website using WebRTC,Socket.io,Express and Firebase
 
 ##  Tech stacks used

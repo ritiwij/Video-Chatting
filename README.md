@@ -1,4 +1,4 @@
-![Uploading Screenshot (237).png…]()
+![Screenshot (237)](https://user-images.githubusercontent.com/61948559/125345553-4fd5f480-e376-11eb-9730-6d26581f866a.png)
 # Video call and chat website using WebRTC,Socket.io,Express and Firebase
 
 ##  Tech stacks used
@@ -55,10 +55,21 @@ you should see the files running on localhost.
 
 ### Guide for using Website
 1. Create and account by clicking signup.
+![Screenshot (238)](https://user-images.githubusercontent.com/61948559/125345675-7431d100-e376-11eb-9dcb-65be7bfcfba4.png)
 2. Relogin information.
+![Screenshot (239)](https://user-images.githubusercontent.com/61948559/125345841-a8a58d00-e376-11eb-99f6-7f3c3454a947.png)
 3. Click on Go to Meeting.
+![Screenshot (237)](https://user-images.githubusercontent.com/61948559/125345750-8d3a8200-e376-11eb-91f3-234b8d32fcdf.png)
 4. The chat room will open, you can type message in the send container at bottom.
 ![Screenshot (236)](https://user-images.githubusercontent.com/61948559/125345213-e2c25f00-e375-11eb-8b33-465ca9a10549.png)
+
+
+
+
+
+
+
+
 
 
 

@@ -16,10 +16,11 @@ const peerServer = ExpressPeerServer(server, {
 /*------------------------x----------------importing----------------x----------------*/
 /*-----------------------firebase----------------------------------*/
 const admin = require("firebase-admin");
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = require("./serviceAccountKey.json"); // Use the absolute path
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
+
 /*-----------x--------------firebase----------------x------------*/
 /*--------------------------middlewares----------*/
 const cookieParser = require("cookie-parser");
